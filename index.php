@@ -69,9 +69,12 @@ $i++;
 }
 ?>
 <br>
-<input type="submit" name="setNext" value="Play Next"> <br>
-<input type="submit" name="remove"  value="Remove from Que"> <br>
-<input type="submit" name="clear"   value="Clear Playlist"> <br> <br>
+<input type="submit" name="remove"  value="Remove from Queue"> <br>
+<input type="submit" name="setNext" value="Play Next"> 
+<input type="submit" name="clear"   value="Clear Playlist"> <br> 
+<input type="submit" name="pause"   value="Pause"> 
+<input type="submit" name="play"    value="Play">  
+<input type="submit" name="next"    value="Next"> <br>
 </form>
 
 </div>
