@@ -1,0 +1,7 @@
+{
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"monstergfx/php-mpd-client": "^0.0.7@alpha"
+	}
+}
