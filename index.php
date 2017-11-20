@@ -32,11 +32,24 @@ print("<h4>" .  "Albums:" . "</h4)<br>");
 
 <?php
 foreach($albums as $album){
+$albumName = explode("Album: ", $album)[1];
+$albumName = rtrim($albumName);
+if($albumName != null){
+    $return = mpd::send("search", "album", $albumName)["values"];
+}
+foreach($return as $entry){
+    if(explode("Artist: ", $entry)[1] != null){
+       $artist = explode("Artist: ", $entry)[1]; 
+    } 
+}
+if($albumName != null){
+
 ?>
 
-<input type="Radio" name="album" value="<?php print($album); ?>"><?php print($album);?>   <br>
+<input type="Radio" name="album" value="<?php print( $album);?>"><?php print($album . " By: " . $artist);?>   <br>
 
 <?php
+}
 } 
 ?>
 
